@@ -32,7 +32,7 @@ body {
 
 .wrapper .input-box {
     width: 100%;
-    padding: 50px;
+    padding: 5px;
     margin: 30px 0;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 .input-box i {
     position: absolute;
-    right: 110px;
+    right: 18%;
     transform: translateY(25px);
     font-size: 20px;
 }
