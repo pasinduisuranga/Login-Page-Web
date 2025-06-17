@@ -1,5 +1,5 @@
 <?php
-    session_start()
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +9,7 @@
     <title>My test</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </head>
 <body>
     <?php
@@ -21,14 +22,14 @@
             echo'<a href="index.html"><ion-icon name="arrow-back"></ion-icon></a>';
         }
         else{
-            $queSel="SELECT RealName FROM users WHERE UserName='$un' AND Password='$pw'";
+            $queSel="SELECT RealName FROM users WHERE Username='$un' AND Password='$pw'";
             $res=mysqli_query($conn,$queSel);
             if(mysqli_num_rows($res)>0){
                 $data=mysqli_query($conn,$queSel);
                 $value=(mysqli_fetch_assoc($data));
 				$_SESSION['RN']=$value["RealName"];
 				$rn=$value['RealName'];
-											
+										
 				$queLogUp="INSERT INTO logsch(RealName,Login)VALUES('$rn',(now()))";
 				if(mysqli_query($conn,$queLogUp)){
 				header("Location:Homepage.php");
