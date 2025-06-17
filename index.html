@@ -10,10 +10,10 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="LogPro.php">
+        <form name ="form1" id="form1" action="LogPro.php" method="post">
             <h1>Login</h1>
             <div class="input-box">
-                <input type="text" placeholder="User name" name="txtUserName" id="txtUserName"  >
+                <input type="text" placeholder="Username" name="txtUserName" id="txtUserName"  required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
@@ -28,6 +28,7 @@
             <button class="btn" type="submit" id="submit" value="LOGIN" > Login </button>
             <div class="register-link">
                 <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
         </form>
     </div>
 </body>
