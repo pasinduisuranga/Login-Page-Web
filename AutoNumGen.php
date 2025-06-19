@@ -10,7 +10,7 @@
 <?php
 	$conn=mysqli_connect('localhost','root','','bizhub');
 	if(!$conn){
-				echo'<h2>DATABASE ERROR!</h2>Database is not connected!'.mysqli_error($conn);
+				echo'<h2>DATABASE ERROR!</h2>Database is not connected! ' . mysqli_connect_error();
 				echo'<a href="index.html"><img src="Image/back.phn" width="35" height="35"></a>';
 				}
 				else{
